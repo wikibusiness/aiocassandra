@@ -36,6 +36,8 @@ class _Paginator:
         self.__pages = set()
 
     def _handle_page(self, rows):
+        if rows is None:
+            rows = list()
         if self._exit_event.is_set():
             _len = len(rows)
             logger.debug(
