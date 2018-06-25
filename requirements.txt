@@ -19,13 +19,13 @@ pexpect==4.6.0
 pickleshare==0.7.4
 pluggy==0.6.0
 prompt-toolkit==2.0.3
-ptyprocess==0.5.2
+ptyprocess==0.6.0
 py==1.5.3
 pycodestyle==2.4.0
 pyflakes==2.0.0
 Pygments==2.2.0
 pyparsing==2.2.0
-pytest==3.6.1
+pytest==3.6.2
 pytest-asyncio==0.8.0
 pytest-cov==2.5.1
 simplegeneric==0.8.1
