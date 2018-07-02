@@ -14,7 +14,7 @@ isort==4.3.4
 jedi==0.12.1
 mccabe==0.6.1
 packaging==17.1
-parso==0.2.1
+parso==0.3.0
 pexpect==4.6.0
 pickleshare==0.7.4
 pluggy==0.6.0
