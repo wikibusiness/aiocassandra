@@ -74,7 +74,7 @@ class _Paginator:
         return self
 
     async def __aexit__(self, *exc_info):
-        self._exit_event.set()
+        self._loop.call_soon_threadsafe(self._finish_event.set)
         _len = len(self._deque)
         self._deque.clear()
         logger.debug(
