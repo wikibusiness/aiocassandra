@@ -38,7 +38,8 @@ def cqlengine_management(cassandra):
     # create test keyspace
     os.environ['CQLENG_ALLOW_SCHEMA_MANAGEMENT'] = 'true'
     test_keyspace = 'test_async_cqlengine'
-    cqlengine_connection.set_session(cassandra)
+    cqlengine_connection.register_connection(
+        'cqlengine', session=cassandra, default=True)
     management.create_keyspace_simple(test_keyspace, replication_factor=1)
 
     # setup cqlengine session
@@ -46,7 +47,7 @@ def cqlengine_management(cassandra):
     cqlengine_connection.set_session(cassandra)
     yield management
     management.drop_keyspace(test_keyspace)
-    cqlengine_connection.unregister_connection('default')
+    cqlengine_connection.unregister_connection('cqlengine')
 
 
 @pytest.fixture
