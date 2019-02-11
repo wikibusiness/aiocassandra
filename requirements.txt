@@ -29,7 +29,7 @@ pytest==4.2.0
 pytest-asyncio==0.10.0
 pytest-cov==2.6.1
 simplegeneric==0.8.1
-six==1.11.0
+six==1.12.0
 tox==3.1.2
 traitlets==4.3.2
 virtualenv==16.0.0
