@@ -145,6 +145,25 @@ async def test_execute_futures_simple_statement(cassandra):
 
 
 @pytest.mark.asyncio
+async def test_execute_futures_simple_statement_limit_pages(cassandra):
+    cql = 'SELECT * FROM system.size_estimates LIMIT 50;'
+    statement = SimpleStatement(cql, fetch_size=10)
+
+    ret = []
+
+    async with cassandra.execute_futures(statement, max_in_memory_pages=3) as paginator:
+        await asyncio.sleep(0.5)  # wait for fetching pages
+        assert len(paginator._deque) == 30
+        async for row in paginator:
+            await asyncio.sleep(0.2)  # slow down consumer
+            assert isinstance(row, tuple)
+            assert len(paginator._deque) <= 30
+            ret.append(row)
+
+    assert len(ret) == 50
+
+
+@pytest.mark.asyncio
 async def test_execute_futures_break(cassandra):
     cql = 'SELECT * FROM system.size_estimates;'
     statement = SimpleStatement(cql, fetch_size=100)
