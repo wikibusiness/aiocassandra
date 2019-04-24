@@ -11,6 +11,7 @@ __pycache__/
 *.egg-info/
 .coverage
 htmlcov
+.pytest_cache/
 
 # generic files to ignore
 *~
@@ -18,6 +19,7 @@ htmlcov
 *.DS_Store
 *.swp
 *.out
+.idea/
 
 .tox/
 deps/

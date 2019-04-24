@@ -11,7 +11,7 @@ needs_pytest = 'pytest' in set(sys.argv)
 def get_version():
     regex = r"__version__\s=\s\'(?P<version>[\d\.ab]+?)\'"
 
-    path = 'aiocassandra.py'
+    path = 'aiocassandra/session.py'
 
     return re.search(regex, read(path)).group('version')
 
@@ -35,7 +35,7 @@ setup(
     setup_requires=['pytest-runner'] if needs_pytest else [],
     tests_require=['pytest', 'pytest-asyncio', 'pytest-cov'],
     python_requires='>=3.4.0',
-    py_modules=['aiocassandra'],
+    packages=['aiocassandra'],
     zip_safe=False,
     classifiers=[
         'Development Status :: 5 - Production/Stable',
