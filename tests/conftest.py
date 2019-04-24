@@ -4,8 +4,8 @@ import os
 
 import pytest
 from cassandra.cluster import Cluster
-from cassandra.cqlengine import management
 from cassandra.cqlengine import connection as cqlengine_connection
+from cassandra.cqlengine import management
 
 from aiocassandra import aiosession
 

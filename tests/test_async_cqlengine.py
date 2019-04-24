@@ -21,7 +21,9 @@ async def test_queryset_async_functions(cqlengine_management):
     """
     cqlengine_management.sync_table(User)
 
-    # test: Model.objects.async_create(), Model.objects.async_all(), Model.objects.async_get()
+    # test: Model.objects.async_create()
+    #       Model.objects.async_all()
+    #       Model.objects.async_get()
     username1 = 'test-username-1'
     await User.objects.async_create(user_id=uuid.uuid4(), username=username1)
     users = await User.objects.async_all()

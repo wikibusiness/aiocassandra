@@ -3,13 +3,12 @@ Patch cqlengine, add async functions.
 """
 from warnings import warn
 
-from cassandra.cqlengine.query import (DMLQuery, ModelQuerySet, check_applied,
-                                       SimpleStatement, conn, ValidationError,
-                                       EqualsOperator)
-from cassandra.cqlengine import CQLEngineException
-from cassandra.cqlengine import columns
-from cassandra.cqlengine.statements import (UpdateStatement, DeleteStatement,
-                                            BaseCQLStatement, InsertStatement)
+from cassandra.cqlengine import CQLEngineException, columns
+from cassandra.cqlengine.query import (DMLQuery, EqualsOperator, ModelQuerySet,
+                                       SimpleStatement, ValidationError,
+                                       check_applied, conn)
+from cassandra.cqlengine.statements import (BaseCQLStatement, DeleteStatement,
+                                            InsertStatement, UpdateStatement)
 
 
 async def _execute_statement(model,
@@ -325,7 +324,8 @@ class AioQuerySet(ModelQuerySet):
             if col_op == 'remove' and isinstance(col, columns.Map):
                 if not isinstance(val, set):
                     raise ValidationError(
-                        "Cannot apply update operation '{0}' on column '{1}' with value '{2}'. A set is required."
+                        "Cannot apply update operation '{0}' on column '{1}' "
+                        "with value '{2}'. A set is required."
                         .format(col_op, col_name, val))
                 val = {v: None for v in val}
             else:
