@@ -13,7 +13,7 @@ ipython-genutils==0.2.0
 isort==4.3.20
 jedi==0.13.3
 mccabe==0.6.1
-packaging==17.1
+packaging==19.0
 parso==0.3.0
 pexpect==4.6.0
 pickleshare==0.7.4
