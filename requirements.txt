@@ -4,7 +4,7 @@ async-generator==1.10
 attrs==19.3.0
 cassandra-driver==3.23.0
 coverage==5.1
-Cython==0.28.4
+Cython==0.29.19
 decorator==4.2.1
 flake8==3.5.0
 ipdb==0.11
