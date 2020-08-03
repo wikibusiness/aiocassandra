@@ -16,7 +16,7 @@ mccabe==0.6.1
 packaging==20.4
 parso==0.7.1
 pexpect==4.8.0
-pickleshare==0.7.4
+pickleshare==0.7.5
 pluggy==0.7.1
 prompt-toolkit==2.0.4
 ptyprocess==0.6.0
