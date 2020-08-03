@@ -1,6 +1,6 @@
 appdirs==1.4.4
 appnope==0.1.0
-async-generator==1.9
+async-generator==1.10
 attrs==18.1.0
 cassandra-driver==3.14.0
 coverage==4.5.1
