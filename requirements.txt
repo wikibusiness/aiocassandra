@@ -32,5 +32,5 @@ simplegeneric==0.8.1
 six==1.15.0
 tox==3.18.1
 traitlets==4.3.3
-virtualenv==16.0.0
+virtualenv==20.0.29
 wcwidth==0.1.7
