@@ -10,7 +10,7 @@ flake8==3.8.3
 ipdb==0.13.3
 ipython==7.18.1
 ipython-genutils==0.2.0
-isort==4.3.4
+isort==5.4.2
 jedi==0.12.1
 mccabe==0.6.1
 packaging==17.1
