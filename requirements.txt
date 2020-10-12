@@ -33,4 +33,4 @@ six==1.15.0
 tox==3.20.1
 traitlets==5.0.4
 virtualenv==20.0.34
-wcwidth==0.1.7
+wcwidth==0.2.5
