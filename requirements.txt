@@ -30,7 +30,7 @@ pytest-asyncio==0.14.0
 pytest-cov==2.10.1
 simplegeneric==0.8.1
 six==1.15.0
-tox==3.1.2
+tox==3.20.1
 traitlets==4.3.2
 virtualenv==16.0.0
 wcwidth==0.1.7
