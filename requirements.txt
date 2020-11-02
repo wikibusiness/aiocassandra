@@ -11,7 +11,7 @@ ipdb==0.13.4
 ipython==7.19.0
 ipython-genutils==0.2.0
 isort==5.6.4
-jedi==0.12.1
+jedi==0.17.2
 mccabe==0.6.1
 packaging==17.1
 parso==0.3.0
