@@ -5,7 +5,7 @@ attrs==20.3.0
 cassandra-driver==3.24.0
 coverage==5.3
 Cython==0.29.21
-decorator==4.2.1
+decorator==4.4.2
 flake8==3.5.0
 ipdb==0.11
 ipython==6.5.0
